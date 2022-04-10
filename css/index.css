@@ -102,7 +102,7 @@ header {
 }
 
 main {
-  margin-top: 120px;
+  margin: 120px 0 183px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -135,6 +135,141 @@ main .containerWorldImg {
 }
 main .containerWorldImg img {
   width: 100%;
+}
+main .containerFalconHeavy {
+  width: 100%;
+  height: 100%;
+  max-height: 1718px;
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-content: end;
+}
+main .containerFalconHeavy .containerFalconHeavyInfo {
+  width: calc(100% - 644px);
+  margin: 0 39px 324px 30px;
+}
+main .containerFalconHeavy .containerFalconHeavyInfo h3 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 45px;
+}
+main .containerFalconHeavy .containerFalconHeavyInfo .titleText {
+  margin-top: 218px;
+}
+main .containerFalconHeavy .containerFalconHeavyInfo table {
+  white-space: nowrap;
+  width: 100%;
+}
+main .containerFalconHeavy .containerFalconHeavyInfo table tr td:first-child {
+  width: 66%;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 179.69%;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+main .containerFalconHeavy .containerFalconHeavyInfo table tr td:last-child {
+  width: 33%;
+}
+main .containerFalconHeavy .containerFalconHeavyInfo table tr td:last-child table {
+  width: auto;
+}
+main .containerFalconHeavy .containerFalconHeavyInfo table tr td:last-child table tr td:first-child {
+  text-transform: lowercase;
+  color: #FFFFFF;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 179.69%;
+  width: auto;
+}
+main .containerFalconHeavy .containerFalconHeavyInfo table tr td:last-child table tr td:last-child {
+  width: auto;
+  text-transform: lowercase;
+  color: #808080;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 179.69%;
+}
+main .containerFalconHeavy .containerFalconHeavyInfo p {
+  width: 490px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 29px;
+  color: #FFFFFF;
+  text-transform: none;
+  text-align: left;
+}
+main .containerFalconHeavy .containerFalconHeavyImg {
+  width: 100%;
+  max-width: 644px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .containerFooterLogo {
+  width: 138.12px;
+  height: 16.71px;
+}
+footer nav {
+  margin: 42px 0 28px;
+}
+footer nav ul {
+  display: flex;
+}
+footer nav ul li {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  margin: 0 10px;
+  color: #FFFFFF;
+}
+footer nav ul li:first-child, footer nav ul li:last-child {
+  margin: 0;
+}
+footer p {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #808080;
+  margin-bottom: 30px;
+}
+footer .footerLink {
+  width: 260px;
+  height: 60px;
+  border: 2px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 6px;
+  margin-bottom: 70px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
 }
 
 /*# sourceMappingURL=index.css.map */

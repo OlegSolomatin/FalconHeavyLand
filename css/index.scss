@@ -94,7 +94,7 @@ header{
   }
 }
 main{
-  margin-top: 120px;
+  margin: 120px 0 183px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -126,5 +126,143 @@ main{
     img{
       width: 100%;
     }
+  }
+  .containerFalconHeavy{
+    width: 100%;
+    height: 100%;
+    max-height: 1718px;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: end;
+    .containerFalconHeavyInfo{
+      width: calc(100% - 644px);
+      margin: 0 39px 324px 30px;
+      h3{
+        font-family: 'Roboto',sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 140%;
+        text-transform: uppercase;
+        color: $fontWhite;
+        margin-bottom: 45px;
+      }
+      .titleText{
+        margin-top: 218px;
+      }
+      table{
+        white-space: nowrap;
+        width: 100%;
+        tr{
+          td:first-child{
+            width: 66%;
+            font-family: 'Roboto', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 179.69%;
+            text-transform: uppercase;
+            color: $fontWhite;
+          }
+          td:last-child{
+            width: 33%;
+            table{
+              width: auto;
+              tr{
+                td:first-child{
+                  text-transform: lowercase;
+                  color: $fontWhite;
+                  font-family: 'Roboto',sans-serif;
+                  font-style: normal;
+                  font-weight: 400;
+                  font-size: 18px;
+                  line-height: 179.69%;
+                  width: auto;
+                }
+                td:last-child{
+                  width: auto;
+                  text-transform: lowercase;
+                  color: $fontGrey;
+                  font-family: 'Roboto',sans-serif;
+                  font-style: normal;
+                  font-weight: 400;
+                  font-size: 18px;
+                  line-height: 179.69%;
+                }
+              }
+            }
+          }
+        }
+      }
+      p{
+        width: 490px;
+        font-family: 'Roboto',sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 29px;
+        color: $fontWhite;
+        text-transform: none;
+        text-align: left;
+      }
+    }
+    .containerFalconHeavyImg{
+      width: 100%;
+      max-width: 644px;
+    }
+  }
+}
+footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+.containerFooterLogo{
+  width: 138.12px;
+  height: 16.71px;
+}
+  nav{
+    margin: 42px 0 28px;
+    ul{
+      display: flex;
+      li{
+        font-family: 'Roboto',sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        margin: 0 10px;
+        color: $fontWhite;
+      }
+      li:first-child, li:last-child{
+        margin: 0;
+      }
+    }
+  }
+  p{
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: $fontGrey;
+    margin-bottom: 30px;
+  }
+  .footerLink{
+    width: 260px;
+    height: 60px;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 6px;
+    margin-bottom: 70px;
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $fontWhite;
   }
 }

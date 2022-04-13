@@ -51,6 +51,9 @@ body{
     margin: 0 50px;
     width: auto;
   }
+  @media screen and (max-width: 768.7px){
+    margin: 0 30px;
+  }
   .containerPositionContent{
     width: 100%;
     max-width: 1231px;
@@ -60,9 +63,62 @@ header{
   width: 100%;
   margin: 53px 0;
 }
+.menu-btn {
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+  /* border: 3px solid #fff; */
+}
+.menu-btn__burger {
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255,101,47,.2);
+  transition: all .5s ease-in-out;
+}
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255,101,47,.2);
+  transition: all .5s ease-in-out;
+}
+.menu-btn__burger::before {
+  transform: translateY(-7px);
+}
+.menu-btn__burger::after {
+  transform: translateY(7px);
+}
+/* ANIMATION */
+.menu-btn.open .menu-btn__burger {
+  transform: translateX(0px);
+  background: transparent;
+  box-shadow: none;
+}
+.menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg);
+}
+.menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg);
+}
 .containerHeader{
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 768.7px) {
+    justify-content: center;
+    align-items: center;
+  }
   .containerHeaderLogo{
     position: relative;
   }
@@ -76,6 +132,9 @@ header{
     font-weight: 400;
     font-size: 12px;
     line-height: 14px;
+    @media screen and (max-width: 768.7px) {
+      display: none;
+    }
     li{
       margin: 0 10px;
     }
@@ -98,6 +157,9 @@ main{
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media screen and (max-width: 768.7px) {
+    margin: 50px 0;
+  }
   h1 {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
@@ -106,6 +168,9 @@ main{
     line-height: 75px;
     text-align: center;
     color: $fontWhite;
+    @media screen and (max-width: 768.7px){
+        font-size: 36px;
+    }
   }
   p{
     width: 268px;
@@ -123,7 +188,7 @@ main{
     width: 100%;
     max-width: 1440px;
     max-height: 1006px;
-    img{
+    img {
       width: 100%;
     }
   }
@@ -135,9 +200,20 @@ main{
     flex-direction: row;
     align-items: end;
     justify-content: end;
+    @media screen and (max-width: 768.7px){
+      max-height: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+      position: relative;
+    }
     .containerFalconHeavyInfo{
       width: calc(100% - 644px);
       margin: 0 39px 324px 30px;
+      @media screen and (max-width: 768.7px) {
+        width: 100%;
+        margin: 0;
+      }
       h3{
         font-family: 'Roboto',sans-serif;
         font-style: normal;
@@ -164,6 +240,9 @@ main{
             line-height: 179.69%;
             text-transform: uppercase;
             color: $fontWhite;
+            @media screen and (max-width: 768.7px){
+              font-size: 14px;
+            }
           }
           td:last-child{
             width: 33%;
@@ -179,6 +258,9 @@ main{
                   font-size: 18px;
                   line-height: 179.69%;
                   width: auto;
+                  @media screen and (max-width: 768.7px){
+                    font-size: 14px;
+                  }
                 }
                 td:last-child{
                   width: auto;
@@ -189,6 +271,9 @@ main{
                   font-weight: 400;
                   font-size: 18px;
                   line-height: 179.69%;
+                  @media screen and (max-width: 768.7px){
+                    font-size: 14px;
+                  }
                 }
               }
             }
@@ -205,11 +290,25 @@ main{
         color: $fontWhite;
         text-transform: none;
         text-align: left;
+        @media screen and (max-width: 768.7px){
+          width: 100%;
+        }
       }
     }
     .containerFalconHeavyImg{
       width: 100%;
       max-width: 644px;
+      @media screen and (max-width: 768.7px) {
+        position: absolute;
+        width: 100%;
+        filter: grayscale(100%) blur(35px);
+        text-align: center;
+        height: 100%;
+        img{
+          height: 100%;
+          width: 100%;
+        }
+      }
     }
   }
 }
@@ -225,6 +324,10 @@ footer{
     margin: 42px 0 28px;
     ul{
       display: flex;
+      @media screen and (max-width: 768.7px){
+        flex-wrap: wrap;
+        justify-content: center;
+      }
       li{
         font-family: 'Roboto',sans-serif;
         font-style: normal;
@@ -233,9 +336,15 @@ footer{
         line-height: 21px;
         margin: 0 10px;
         color: $fontWhite;
+        @media screen and (max-width: 768.7px){
+          margin-top: 10px;
+        }
       }
       li:first-child, li:last-child{
         margin: 0;
+        @media screen and (max-width: 768.7px){
+          margin: 10px 10px 0 10px;
+        }
       }
     }
   }
@@ -247,6 +356,9 @@ footer{
     line-height: 21px;
     color: $fontGrey;
     margin-bottom: 30px;
+    @media screen and (max-width: 768.7px){
+      text-align: center;
+    }
   }
   .footerLink{
     width: 260px;

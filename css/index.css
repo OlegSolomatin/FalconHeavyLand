@@ -69,7 +69,27 @@ body {
 
 header {
   width: 100%;
-  margin: 53px 0;
+  max-width: 1200px;
+  padding: 53px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: auto;
+  right: 0;
+  background: #010001;
+  z-index: 99;
+}
+@media screen and (max-width: 1366.7px) {
+  header {
+    width: auto;
+    margin: 0 72px;
+  }
+}
+@media screen and (max-width: 768.7px) {
+  header {
+    padding: 25px 0;
+    margin: 0;
+  }
 }
 
 .menu-btn {
@@ -82,7 +102,13 @@ header {
   height: 50px;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
+  z-index: 101;
   /* border: 3px solid #fff; */
+}
+@media screen and (min-width: 768.7px) {
+  .menu-btn {
+    display: none;
+  }
 }
 
 .menu-btn__burger {
@@ -119,6 +145,7 @@ header {
   transform: translateX(0px);
   background: transparent;
   box-shadow: none;
+  position: fixed;
 }
 
 .menu-btn.open .menu-btn__burger::before {
@@ -141,6 +168,7 @@ header {
 }
 .containerHeader .containerHeaderLogo {
   position: relative;
+  z-index: 101;
 }
 .containerHeader .listMenu, .containerHeader .listMenuOther {
   white-space: nowrap;
@@ -173,16 +201,54 @@ header {
 .containerHeader .listMenuOther {
   color: #808080;
 }
+.containerHeader .containerMobileMenu {
+  display: none;
+}
+.containerHeader .containerMobileMenu.open {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: white;
+  flex-direction: column;
+  z-index: 100;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.9);
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+.containerHeader .containerMobileMenu.open .listMenuMobile, .containerHeader .containerMobileMenu.open .listMenuOtherMobile {
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 36px;
+}
+.containerHeader .containerMobileMenu.open .app-logo {
+  display: flex;
+}
+.containerHeader .containerMobileMenu.open .app-logo a {
+  margin: 10px;
+}
 
 main {
-  margin: 120px 0 183px 0;
+  margin: 127px 0 183px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 @media screen and (max-width: 768.7px) {
   main {
-    margin: 50px 0;
+    margin: 72px 0;
   }
 }
 main h1 {
@@ -241,10 +307,16 @@ main .containerFalconHeavy .containerFalconHeavyInfo {
   width: calc(100% - 644px);
   margin: 0 39px 324px 30px;
 }
+@media screen and (max-width: 1024.7px) {
+  main .containerFalconHeavy .containerFalconHeavyInfo {
+    width: 50%;
+    margin-bottom: 75px;
+  }
+}
 @media screen and (max-width: 768.7px) {
   main .containerFalconHeavy .containerFalconHeavyInfo {
     width: 100%;
-    margin: 0;
+    margin: 70px 0;
   }
 }
 main .containerFalconHeavy .containerFalconHeavyInfo h3 {
@@ -259,6 +331,11 @@ main .containerFalconHeavy .containerFalconHeavyInfo h3 {
 }
 main .containerFalconHeavy .containerFalconHeavyInfo .titleText {
   margin-top: 218px;
+}
+@media screen and (max-width: 1024.7px) {
+  main .containerFalconHeavy .containerFalconHeavyInfo .titleText {
+    margin-top: 75px;
+  }
 }
 main .containerFalconHeavy .containerFalconHeavyInfo table {
   white-space: nowrap;
@@ -316,7 +393,8 @@ main .containerFalconHeavy .containerFalconHeavyInfo table tr td:last-child tabl
   }
 }
 main .containerFalconHeavy .containerFalconHeavyInfo p {
-  width: 490px;
+  width: 100%;
+  max-width: 490px;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -329,11 +407,21 @@ main .containerFalconHeavy .containerFalconHeavyInfo p {
 @media screen and (max-width: 768.7px) {
   main .containerFalconHeavy .containerFalconHeavyInfo p {
     width: 100%;
+    max-width: none;
   }
 }
 main .containerFalconHeavy .containerFalconHeavyImg {
   width: 100%;
   max-width: 644px;
+}
+main .containerFalconHeavy .containerFalconHeavyImg img {
+  height: 100%;
+  width: 100%;
+}
+@media screen and (max-width: 1024.7px) {
+  main .containerFalconHeavy .containerFalconHeavyImg {
+    width: 50%;
+  }
 }
 @media screen and (max-width: 768.7px) {
   main .containerFalconHeavy .containerFalconHeavyImg {
